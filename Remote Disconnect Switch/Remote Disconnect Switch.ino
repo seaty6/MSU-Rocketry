@@ -7,10 +7,15 @@
 #define switchPressed D1
 #define switchLogicPower D2
 
+
+
 //limit switch wiring:
 //Red wire on ground
 //Green wire on D1
 //Black wire on D2
+
+//Please make sure there isn't a floating ground!
+//Use pullup resistors to prevent this from happening (again)
 
 
 
