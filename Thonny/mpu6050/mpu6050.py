@@ -80,6 +80,8 @@ class accel():
 
         print(f"Accel Offsets: {acc_offsets}")
         
+        return acc_offsets
+        
             
 #i2c = machine.I2C(1, sda=machine.Pin(21), scl=machine.Pin(22))
 

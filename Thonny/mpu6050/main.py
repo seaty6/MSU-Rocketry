@@ -15,7 +15,7 @@ mpu= mpu6050.accel(i2c)
 while True:
      dic = mpu.get_values()
      
-     mpu.calibrate(dic)  # comment this to get back to uncalibrated values
+     offsets = mpu.calibrate(dic)  # comment this to get back to uncalibrated values
     
      mqttc.publish( b'/mpu6050/AcX/', str( dic["AcX"] ).encode() )
      mqttc.publish( b'/mpu6050/AcY/', str( dic["AcY"] ).encode() )
