@@ -1,6 +1,6 @@
 [
     {
-        "id": "12d098e2f1a5f72b",
+        "id": "20ee9d22ada2de34",
         "type": "tab",
         "label": "Monitor Flight",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "69810e7689e122c9",
+        "id": "a217a234f2df7fdd",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "7bd59ae0528e5684",
         "order": 1,
         "width": 0,
@@ -29,9 +29,9 @@
         "wires": []
     },
     {
-        "id": "22587bf1cd925d52",
+        "id": "80d55987687d1258",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "f44905f4c5202a53",
         "order": 1,
         "width": 0,
@@ -50,9 +50,9 @@
         "wires": []
     },
     {
-        "id": "51bfed26d62f9fcc",
+        "id": "1d0ad78951595e37",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "f647ecbd632b6bad",
         "order": 1,
         "width": 0,
@@ -71,9 +71,9 @@
         "wires": []
     },
     {
-        "id": "4dc74272916566fe",
+        "id": "c7fb61c055246c70",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "7af083d2ea7fe03c",
         "order": 1,
         "width": 0,
@@ -92,9 +92,9 @@
         "wires": []
     },
     {
-        "id": "b509d3539b984de5",
+        "id": "c11c977407696ab8",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "515cb7f41e4deb83",
         "order": 1,
         "width": 0,
@@ -113,9 +113,9 @@
         "wires": []
     },
     {
-        "id": "ecebcd72adc7118f",
+        "id": "1c5e4872d22f5b95",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "515cb7f41e4deb83",
         "order": 2,
         "width": 0,
@@ -134,9 +134,9 @@
         "wires": []
     },
     {
-        "id": "0aa659dc72235e42",
+        "id": "e4fdfb615d70e122",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "d6e98cbeb7320dc9",
         "order": 1,
         "width": 0,
@@ -155,9 +155,9 @@
         "wires": []
     },
     {
-        "id": "fb9f2fa4325c4ef1",
+        "id": "5bae34da52a4a4b6",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "7af083d2ea7fe03c",
         "order": 2,
         "width": 0,
@@ -176,9 +176,9 @@
         "wires": []
     },
     {
-        "id": "ddbad739f05235e4",
+        "id": "4b2f1e563e21aff7",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "515cb7f41e4deb83",
         "order": 3,
         "width": 0,
@@ -197,9 +197,9 @@
         "wires": []
     },
     {
-        "id": "2382f7bca48d9fa3",
+        "id": "98cdda7e271ec718",
         "type": "mqtt in",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "name": "",
         "topic": "/altimeter/temperature/",
         "qos": "2",
@@ -213,14 +213,14 @@
         "y": 600,
         "wires": [
             [
-                "45d18eac44b24df1"
+                "d5d4b5a6cb66ad02"
             ]
         ]
     },
     {
-        "id": "d0e2bda4b2608b92",
+        "id": "28bd36789aaabcdb",
         "type": "ui_text",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "group": "531abbba8b0b9ee8",
         "order": 1,
         "width": 0,
@@ -239,9 +239,9 @@
         "wires": []
     },
     {
-        "id": "c5ebfbfd82ebc5cd",
+        "id": "9ddba8d15300ddf4",
         "type": "mqtt in",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "name": "",
         "topic": "/altimeter/altitude/",
         "qos": "2",
@@ -255,42 +255,42 @@
         "y": 480,
         "wires": [
             [
-                "3660b13c83613ac2"
+                "660c423d1bb216ad"
             ]
         ]
     },
     {
-        "id": "3660b13c83613ac2",
+        "id": "660c423d1bb216ad",
         "type": "kalman-noise-filter",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "r": 0.01,
         "q": 3,
         "x": 270,
         "y": 480,
         "wires": [
             [
-                "220e27f2051f651b"
+                "48f0c4e494f6cad6"
             ]
         ]
     },
     {
-        "id": "45d18eac44b24df1",
+        "id": "d5d4b5a6cb66ad02",
         "type": "kalman-noise-filter",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "r": 0.01,
         "q": 3,
         "x": 290,
         "y": 600,
         "wires": [
             [
-                "0aca2ff497cb0188"
+                "d96066f751cbaebd"
             ]
         ]
     },
     {
-        "id": "220e27f2051f651b",
+        "id": "48f0c4e494f6cad6",
         "type": "function",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "name": "Round",
         "func": "msg.payload = Math.floor(msg.payload)\nreturn msg;",
         "outputs": 1,
@@ -303,14 +303,14 @@
         "y": 480,
         "wires": [
             [
-                "ddbad739f05235e4"
+                "4b2f1e563e21aff7"
             ]
         ]
     },
     {
-        "id": "0aca2ff497cb0188",
+        "id": "d96066f751cbaebd",
         "type": "function",
-        "z": "12d098e2f1a5f72b",
+        "z": "20ee9d22ada2de34",
         "name": "Round",
         "func": "msg.payload = Math.floor(msg.payload)\nreturn msg;",
         "outputs": 1,
@@ -323,9 +323,529 @@
         "y": 600,
         "wires": [
             [
-                "d0e2bda4b2608b92"
+                "28bd36789aaabcdb"
             ]
         ]
+    },
+    {
+        "id": "b89781214bf4e5ef",
+        "type": "ui_text",
+        "z": "20ee9d22ada2de34",
+        "group": "307f264716438cd9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "mpu6050_AcX_Title",
+        "label": "Acceleration X:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 600,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ee448334a5d3e23d",
+        "type": "mqtt in",
+        "z": "20ee9d22ada2de34",
+        "name": "/mpu6050/AcX/",
+        "topic": "/mpu6050/AcX/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4c061292fdee8335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 680,
+        "wires": [
+            [
+                "6df3a61d397589c8"
+            ]
+        ]
+    },
+    {
+        "id": "6df3a61d397589c8",
+        "type": "kalman-noise-filter",
+        "z": "20ee9d22ada2de34",
+        "r": 0.01,
+        "q": 3,
+        "x": 250,
+        "y": 680,
+        "wires": [
+            [
+                "afe5ac8fe37e5b1e"
+            ]
+        ]
+    },
+    {
+        "id": "afe5ac8fe37e5b1e",
+        "type": "function",
+        "z": "20ee9d22ada2de34",
+        "name": "Round",
+        "func": "msg.payload = Math.floor(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "b89781214bf4e5ef"
+            ]
+        ]
+    },
+    {
+        "id": "f4a698e21f48d187",
+        "type": "ui_text",
+        "z": "20ee9d22ada2de34",
+        "group": "307f264716438cd9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "mpu6050_AcY_Title",
+        "label": "Acceleration Y:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 620,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "a6a16279b28f7df9",
+        "type": "mqtt in",
+        "z": "20ee9d22ada2de34",
+        "name": "/mpu6050/AcY/",
+        "topic": "/mpu6050/AcY/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4c061292fdee8335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 760,
+        "wires": [
+            [
+                "9e55cf9c7ed8be72"
+            ]
+        ]
+    },
+    {
+        "id": "9e55cf9c7ed8be72",
+        "type": "kalman-noise-filter",
+        "z": "20ee9d22ada2de34",
+        "r": 0.01,
+        "q": 3,
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "17c141452a685d20"
+            ]
+        ]
+    },
+    {
+        "id": "17c141452a685d20",
+        "type": "function",
+        "z": "20ee9d22ada2de34",
+        "name": "Round",
+        "func": "msg.payload = Math.floor(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 760,
+        "wires": [
+            [
+                "f4a698e21f48d187"
+            ]
+        ]
+    },
+    {
+        "id": "780a1b72ece7f146",
+        "type": "ui_text",
+        "z": "20ee9d22ada2de34",
+        "group": "307f264716438cd9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "mpu6050_AcZ_Title",
+        "label": "Acceleration Z:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 600,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "c5b0dbb8b3ba4244",
+        "type": "mqtt in",
+        "z": "20ee9d22ada2de34",
+        "name": "/mpu6050/AcZ/",
+        "topic": "/mpu6050/AcZ/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4c061292fdee8335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 840,
+        "wires": [
+            [
+                "81c87d30195530f2"
+            ]
+        ]
+    },
+    {
+        "id": "81c87d30195530f2",
+        "type": "kalman-noise-filter",
+        "z": "20ee9d22ada2de34",
+        "r": 0.01,
+        "q": 3,
+        "x": 250,
+        "y": 840,
+        "wires": [
+            [
+                "c313fdcedd939d80"
+            ]
+        ]
+    },
+    {
+        "id": "c313fdcedd939d80",
+        "type": "function",
+        "z": "20ee9d22ada2de34",
+        "name": "Round",
+        "func": "msg.payload = Math.floor(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 840,
+        "wires": [
+            [
+                "780a1b72ece7f146"
+            ]
+        ]
+    },
+    {
+        "id": "aab74c873699be5b",
+        "type": "tab",
+        "label": "Config SpartanFlight v1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9e8ff4ad57cc680d",
+        "type": "ui_text",
+        "z": "aab74c873699be5b",
+        "group": "8d4a90db01ddc0e3",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "BatteryVoltage_Title",
+        "label": "Battery Voltage:",
+        "format": "3.53 V",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 260,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b203d72bb1dba5c6",
+        "type": "tab",
+        "label": "Config Ground Station",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a10559ab062cd7f5",
+        "type": "ui_text",
+        "z": "b203d72bb1dba5c6",
+        "group": "dd5a300443c1fb37",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "This is a test",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 290,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8194212c90167eea",
+        "type": "tab",
+        "label": "Monitor Idle",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f62a2847388d31fa",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "BatteryVoltage_Title",
+        "label": "Battery Voltage:",
+        "format": "3.53 V",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 240,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cf6b9842ede1dc15",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "ApogeeVoltage_Title",
+        "label": "Apogee Igniter Voltage:",
+        "format": "0.00 V",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 240,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "aa4895151a754eb7",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "MainVoltage_Title",
+        "label": "Main Igniter Voltage:",
+        "format": "0.00 V",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 230,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ae8458afaa104f8f",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "GPSview_Title",
+        "label": "Number of satellite in view:",
+        "format": "9",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 220,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6f4a543f46aba9bb",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "GPSpadLatitude_Title",
+        "label": "Pad Latitude:",
+        "format": "N   42deg   43.4411142",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 240,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c74495114bf3857d",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "GPSpadLongitude_Title",
+        "label": "Pad Longitude:",
+        "format": "W   84deg   28.806650",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 250,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "968c629171bf271d",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "DataLogging_Title",
+        "label": "On-board Data Logging:",
+        "format": "Ready",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 230,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "59bb579d9ad34597",
+        "type": "ui_text",
+        "z": "8194212c90167eea",
+        "group": "18599f3a4594cb0f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "GPSsolution_Title",
+        "label": "Number of satellite in solution:",
+        "format": "4",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 230,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2ee58e17a1fc33f7",
+        "type": "tab",
+        "label": "Fire Igniter",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6c8c77b5b90cadad",
+        "type": "ui_text",
+        "z": "2ee58e17a1fc33f7",
+        "group": "957dbc1a1b49db8c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 290,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "547f75f8926162f7",
+        "type": "tab",
+        "label": "Graph Data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0fa8c479af76bd86",
+        "type": "ui_text",
+        "z": "547f75f8926162f7",
+        "group": "62ab7af2549bb141",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 310,
+        "y": 60,
+        "wires": []
     },
     {
         "id": "7bd59ae0528e5684",
@@ -436,11 +956,122 @@
         "className": ""
     },
     {
+        "id": "307f264716438cd9",
+        "type": "ui_group",
+        "name": "Accelerometer",
+        "tab": "4fa38008a8aa956c",
+        "order": 8,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8d4a90db01ddc0e3",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "fc042a3e748f4c27",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd5a300443c1fb37",
+        "type": "ui_group",
+        "name": "2",
+        "tab": "f3bf04ec3043c3ec",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "18599f3a4594cb0f",
+        "type": "ui_group",
+        "name": "3",
+        "tab": "82e46939533dd312",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "957dbc1a1b49db8c",
+        "type": "ui_group",
+        "name": "4",
+        "tab": "54ee4bd4f8321715",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "62ab7af2549bb141",
+        "type": "ui_group",
+        "name": "5",
+        "tab": "d3a8b6702afd98ac",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "4fa38008a8aa956c",
         "type": "ui_tab",
         "name": "Monitor Flight",
         "icon": "dashboard",
         "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fc042a3e748f4c27",
+        "type": "ui_tab",
+        "name": "Configure SpartanFlight v1",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f3bf04ec3043c3ec",
+        "type": "ui_tab",
+        "name": "Configure Ground Station",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "82e46939533dd312",
+        "type": "ui_tab",
+        "name": "Moniter Idle",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "54ee4bd4f8321715",
+        "type": "ui_tab",
+        "name": "Fire Igniter",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d3a8b6702afd98ac",
+        "type": "ui_tab",
+        "name": "Graph Data",
+        "icon": "dashboard",
+        "order": 7,
         "disabled": false,
         "hidden": false
     }
