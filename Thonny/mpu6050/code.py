@@ -26,7 +26,7 @@ pool = socketpool.SocketPool(wifi.radio)
 
 # Set up a MiniMQTT Client
 mqtt_client = MQTT.MQTT(
-    broker="***.***.*.***",
+    broker="***.***.*.***",  # your ip address when connected to RocketryMQTTAP
     port=1883,
     username="RocketryMQTTAP",
     password="gospartans",
