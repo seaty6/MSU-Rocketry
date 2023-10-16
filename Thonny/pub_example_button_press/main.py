@@ -4,7 +4,7 @@ from time import sleep
 
 ### --- same as before ---
 CLIENT_NAME = 'esp01'
-BROKER_ADDR = '192.168.137.1'
+BROKER_ADDR = '192.168.0.100'
 mqttc = MQTTClient(CLIENT_NAME, BROKER_ADDR, keepalive=60)
 mqttc.connect()
 ### ----------------------
