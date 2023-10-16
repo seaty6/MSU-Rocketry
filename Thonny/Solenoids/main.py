@@ -14,9 +14,11 @@ BTN_TOPIC = CLIENT_NAME.encode() + b'/btn/0'
 ### -----------------------
 
 # led setup
-sol1 = Pin(2, Pin.OUT)
-sol2 = Pin(4, Pin.OUT)
-soltopic = b'/solenoid/1'
+sol1 = Pin(4, Pin.OUT)
+sol2 = Pin(16, Pin.OUT)
+sol3 = pin(18, Pin.OUT)
+sol4 = pin(19, Pin.OUT) #ematch!
+soltopic = b'/solenoid'
 
 
 
@@ -29,6 +31,17 @@ def change_solenoid(topic, msg):
         sol2.value(0)
     if msg.decode() == 'sol2on':
         sol2.value(1)  
+    if msg.decode() == 'sol3off':
+        sol3.value(0)
+    if msg.decode() == 'sol3on':
+        sol3.value(1)
+
+    #ematch! 
+    if msg.decode() == 'sol4off':
+        sol4.value(0)
+    if msg.decode() == 'sol4on':
+        sol4.value(1)
+    
         
 # mqtt subscription
 mqttc.set_callback(change_solenoid)
