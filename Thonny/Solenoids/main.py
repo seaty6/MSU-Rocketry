@@ -24,9 +24,9 @@ soltopic = b'/solenoid'
 
 def change_solenoid(topic, msg):
     if msg.decode() == 'sol1off':
-        sol1.value(0)
+        sol1.value(0) # low = off
     if msg.decode() == 'sol1on':
-        sol1.value(1)
+        sol1.value(1) # high = on
     if msg.decode() == 'sol2off':
         sol2.value(0)
     if msg.decode() == 'sol2on':
@@ -35,7 +35,6 @@ def change_solenoid(topic, msg):
         sol3.value(0)
     if msg.decode() == 'sol3on':
         sol3.value(1)
-
     #ematch! 
     if msg.decode() == 'ematchoff':
         ematch.value(0)
@@ -48,7 +47,8 @@ mqttc.subscribe(soltopic)
 
 
 while True:
-    mqttc.publish( BTN_TOPIC, str(btn.value()).encode() )
+    mqttc.publish( BTN_TOPIC, str("I'm still here!").encode() )
     mqttc.check_msg()
     sleep(0.5)
+
 
