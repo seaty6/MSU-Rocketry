@@ -1,0 +1,122 @@
+[
+    {
+        "id": "ea4d7e1e8eb5b894",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5ef4193fb280337c",
+        "type": "mqtt in",
+        "z": "ea4d7e1e8eb5b894",
+        "name": "force",
+        "topic": "/loadcell/force/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d0b74c7c107c60de",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "28f97aac55914c22"
+            ]
+        ]
+    },
+    {
+        "id": "7f402fdaea27f594",
+        "type": "ui_text",
+        "z": "ea4d7e1e8eb5b894",
+        "group": "9a85cf5447436262",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "weight:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "28f97aac55914c22",
+        "type": "function",
+        "z": "ea4d7e1e8eb5b894",
+        "name": "function 1",
+        "func": "var newMsg = { payload: msg.payload.length };\nconst messages = new Array(node.outputCount)\nconst chosenOutputIndex = Math.floor(Math.random() * node.outputCount);\nmessages[chosenOutputIndex] = newMsg;\nreturn messages;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "7f402fdaea27f594"
+            ]
+        ]
+    },
+    {
+        "id": "d0b74c7c107c60de",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.0.100",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9a85cf5447436262",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "32fa08825626c11c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "32fa08825626c11c",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
