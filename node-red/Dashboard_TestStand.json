@@ -2,7 +2,7 @@
     {
         "id": "3a0e2251f092d520",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Test Stand Electronics",
         "disabled": false,
         "info": "",
         "env": []
@@ -20,7 +20,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "4fb2166cce6cfb74",
+        "broker": "8f0859823d35e390",
         "x": 540,
         "y": 180,
         "wires": []
@@ -38,7 +38,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "4fb2166cce6cfb74",
+        "broker": "8f0859823d35e390",
         "x": 600,
         "y": 460,
         "wires": []
@@ -179,7 +179,7 @@
         "topic": "topic/pressure",
         "qos": "2",
         "datatype": "auto-detect",
-        "broker": "4fb2166cce6cfb74",
+        "broker": "8f0859823d35e390",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -270,7 +270,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "4fb2166cce6cfb74",
+        "broker": "8f0859823d35e390",
         "x": 1000,
         "y": 280,
         "wires": []
@@ -528,52 +528,6 @@
         ]
     },
     {
-        "id": "9e6c2324deeb7c01",
-        "type": "ui_button",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "group": "f0ab6a94c37a62ed",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Tare",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "1",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 170,
-        "y": 820,
-        "wires": [
-            [
-                "874748da491c0ad1"
-            ]
-        ]
-    },
-    {
-        "id": "874748da491c0ad1",
-        "type": "mqtt out",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/loadcells/tare",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "8f0859823d35e390",
-        "x": 370,
-        "y": 800,
-        "wires": []
-    },
-    {
         "id": "1bc7f8432a15103f",
         "type": "ui_chart",
         "z": "3a0e2251f092d520",
@@ -704,10 +658,173 @@
         ]
     },
     {
-        "id": "4fb2166cce6cfb74",
+        "id": "b2ca5f8be192a3af",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "/pressure/1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 1120,
+        "wires": [
+            [
+                "bb0e15132ec06edd",
+                "b81219a8da3f398a"
+            ]
+        ]
+    },
+    {
+        "id": "95b35b7fad0c5b1f",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "Store Calibration",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length < 2) {\n    calibrationPoints.push({\n        rawValue: msg.payload.rawValue,\n        pressureValue: msg.payload.pressureValue\n    });\n    \n    flow.set(\"calibrationPoints\", calibrationPoints);\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb0e15132ec06edd",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "function 1",
+        "func": "flow.set(\"lastRawValue\", msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3fa1374de92dffa5",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "function 2",
+        "func": "var pressureValue = parseInt(msg.payload.calibrationValue, 10);  // Convert entered value to number\nvar rawValue = flow.get(\"lastRawValue\");\n\nreturn {\n    payload: {\n        pressureValue: pressureValue,\n        rawValue: rawValue\n    }\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1340,
+        "wires": [
+            [
+                "95b35b7fad0c5b1f"
+            ]
+        ]
+    },
+    {
+        "id": "b81219a8da3f398a",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "Calculate Pressure",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length === 2) {\n    var p1 = calibrationPoints[0];\n    var p2 = calibrationPoints[1];\n\n    var m = (p2.pressureValue - p1.pressureValue) / (p2.rawValue - p1.rawValue);\n    var b = p1.pressureValue - m * p1.rawValue;\n\n    var pressure = m * msg.payload + b;\n    return { payload: pressure };\n} else {\n    // Not enough calibration points\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1180,
+        "wires": [
+            [
+                "ae682bab9d2067c0"
+            ]
+        ]
+    },
+    {
+        "id": "ae682bab9d2067c0",
+        "type": "ui_gauge",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "group": "752fea892e5794dc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Pressure Graph",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 720,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "2657e050c3df2579",
+        "type": "ui_form",
+        "z": "3a0e2251f092d520",
+        "name": "Calibration Value Form",
+        "label": "Calibration Value Form",
+        "group": "4755d6d89d9c934a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Calibration Value",
+                "value": "calibrationValue",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "calibrationValue": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 140,
+        "y": 1300,
+        "wires": [
+            [
+                "3fa1374de92dffa5"
+            ]
+        ]
+    },
+    {
+        "id": "8f0859823d35e390",
         "type": "mqtt-broker",
-        "name": "Solder",
-        "broker": "localhost",
+        "name": "Rocket",
+        "broker": "192.168.0.100",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -744,37 +861,6 @@
         "width": 6
     },
     {
-        "id": "8f0859823d35e390",
-        "type": "mqtt-broker",
-        "name": "Rocket",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "f0ab6a94c37a62ed",
         "type": "ui_group",
         "name": "Default",
@@ -786,9 +872,39 @@
         "className": ""
     },
     {
+        "id": "752fea892e5794dc",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "feae6ac99750d11d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4755d6d89d9c934a",
+        "type": "ui_group",
+        "name": "Calibration",
+        "tab": "d2c47d56c2b42d73",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "feae6ac99750d11d",
         "type": "ui_tab",
         "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d2c47d56c2b42d73",
+        "type": "ui_tab",
+        "name": "Calibration",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
