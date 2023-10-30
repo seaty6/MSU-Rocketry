@@ -1,0 +1,912 @@
+[
+    {
+        "id": "3a0e2251f092d520",
+        "type": "tab",
+        "label": "Test Stand Electronics",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3967ecf599ba2756",
+        "type": "mqtt out",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/solenoid",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8f0859823d35e390",
+        "x": 540,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "63736a6b64b21663",
+        "type": "mqtt out",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/solenoid",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8f0859823d35e390",
+        "x": 600,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "38145b4ea934f5ec",
+        "type": "ui_chart",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "group": "2933dd722d9486d8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "PrssureComb",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 300,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "749c92b338a2b163",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/pressure",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "38145b4ea934f5ec"
+            ]
+        ]
+    },
+    {
+        "id": "5304fb2a4c75875f",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "testtopic/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d43d760f82c773f",
+        "type": "ui_chart",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "group": "2933dd722d9486d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "PressureIntTank",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Pressure",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 800,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e017b51e3fad40c",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/pressure",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "6d43d760f82c773f"
+            ]
+        ]
+    },
+    {
+        "id": "08f53b5aead9237d",
+        "type": "ui_chart",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "group": "2933dd722d9486d8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "PressureFlexLine",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a15f5c687d85489e",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/pressure",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 390,
+        "y": 660,
+        "wires": [
+            [
+                "08f53b5aead9237d"
+            ]
+        ]
+    },
+    {
+        "id": "250cf42eba177aba",
+        "type": "mqtt out",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/solenoid",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8f0859823d35e390",
+        "x": 1000,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4ea551dc757efc95",
+        "type": "ui_switch",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "label": "IntDrainSol",
+        "tooltip": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "1off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "3967ecf599ba2756",
+                "fbc211eac8e7fa61"
+            ]
+        ]
+    },
+    {
+        "id": "55719a948432644e",
+        "type": "ui_switch",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "label": "FlexFillSol",
+        "tooltip": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "3on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "3off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 730,
+        "y": 260,
+        "wires": [
+            [
+                "250cf42eba177aba",
+                "9dcc86049e653feb"
+            ]
+        ]
+    },
+    {
+        "id": "3e2bee089f4d604b",
+        "type": "ui_switch",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "label": "FlexDrainSol",
+        "tooltip": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "2on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "2off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "63736a6b64b21663",
+                "fbc211eac8e7fa61"
+            ]
+        ]
+    },
+    {
+        "id": "d523a52adb6c87c5",
+        "type": "change",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "3off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 380,
+        "wires": [
+            [
+                "55719a948432644e"
+            ]
+        ]
+    },
+    {
+        "id": "fbc211eac8e7fa61",
+        "type": "switch",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 420,
+        "wires": [
+            [
+                "d523a52adb6c87c5"
+            ],
+            [
+                "d523a52adb6c87c5"
+            ]
+        ]
+    },
+    {
+        "id": "9dcc86049e653feb",
+        "type": "switch",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "3on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "fb3a1ff228c1a7ab"
+            ],
+            [
+                "36a23818448d5c8f"
+            ]
+        ]
+    },
+    {
+        "id": "fb3a1ff228c1a7ab",
+        "type": "change",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 600,
+        "wires": [
+            [
+                "4ea551dc757efc95"
+            ]
+        ]
+    },
+    {
+        "id": "36a23818448d5c8f",
+        "type": "change",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 760,
+        "wires": [
+            [
+                "3e2bee089f4d604b"
+            ]
+        ]
+    },
+    {
+        "id": "1bc7f8432a15103f",
+        "type": "ui_chart",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Load Cells",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 610,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e57c673bfd937a17",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/loadcells/values",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 1020,
+        "wires": [
+            [
+                "1bc7f8432a15103f"
+            ]
+        ]
+    },
+    {
+        "id": "18125a37d6552156",
+        "type": "ui_chart",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Thermocouples",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31304f4f028e8b02",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "topic/thermocouples",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 940,
+        "wires": [
+            [
+                "18125a37d6552156"
+            ]
+        ]
+    },
+    {
+        "id": "b2ca5f8be192a3af",
+        "type": "mqtt in",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "topic": "/pressure/1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 1120,
+        "wires": [
+            [
+                "bb0e15132ec06edd",
+                "b81219a8da3f398a"
+            ]
+        ]
+    },
+    {
+        "id": "95b35b7fad0c5b1f",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "Store Calibration",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length < 2) {\n    calibrationPoints.push({\n        rawValue: msg.payload.rawValue,\n        pressureValue: msg.payload.pressureValue\n    });\n    \n    flow.set(\"calibrationPoints\", calibrationPoints);\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb0e15132ec06edd",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "function 1",
+        "func": "flow.set(\"lastRawValue\", msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3fa1374de92dffa5",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "function 2",
+        "func": "var pressureValue = parseInt(msg.payload.calibrationValue, 10);  // Convert entered value to number\nvar rawValue = flow.get(\"lastRawValue\");\n\nreturn {\n    payload: {\n        pressureValue: pressureValue,\n        rawValue: rawValue\n    }\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1340,
+        "wires": [
+            [
+                "95b35b7fad0c5b1f"
+            ]
+        ]
+    },
+    {
+        "id": "b81219a8da3f398a",
+        "type": "function",
+        "z": "3a0e2251f092d520",
+        "name": "Calculate Pressure",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length === 2) {\n    var p1 = calibrationPoints[0];\n    var p2 = calibrationPoints[1];\n\n    var m = (p2.pressureValue - p1.pressureValue) / (p2.rawValue - p1.rawValue);\n    var b = p1.pressureValue - m * p1.rawValue;\n\n    var pressure = m * msg.payload + b;\n    return { payload: pressure };\n} else {\n    // Not enough calibration points\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1180,
+        "wires": [
+            [
+                "ae682bab9d2067c0"
+            ]
+        ]
+    },
+    {
+        "id": "ae682bab9d2067c0",
+        "type": "ui_gauge",
+        "z": "3a0e2251f092d520",
+        "name": "",
+        "group": "752fea892e5794dc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Pressure Graph",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 720,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "2657e050c3df2579",
+        "type": "ui_form",
+        "z": "3a0e2251f092d520",
+        "name": "Calibration Value Form",
+        "label": "Calibration Value Form",
+        "group": "4755d6d89d9c934a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Calibration Value",
+                "value": "calibrationValue",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "calibrationValue": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 140,
+        "y": 1300,
+        "wires": [
+            [
+                "3fa1374de92dffa5"
+            ]
+        ]
+    },
+    {
+        "id": "8f0859823d35e390",
+        "type": "mqtt-broker",
+        "name": "Rocket",
+        "broker": "192.168.0.100",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2933dd722d9486d8",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "feae6ac99750d11d",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "f0ab6a94c37a62ed",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "feae6ac99750d11d",
+        "order": 2,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "752fea892e5794dc",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "feae6ac99750d11d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4755d6d89d9c934a",
+        "type": "ui_group",
+        "name": "Calibration",
+        "tab": "d2c47d56c2b42d73",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "feae6ac99750d11d",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d2c47d56c2b42d73",
+        "type": "ui_tab",
+        "name": "Calibration",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
