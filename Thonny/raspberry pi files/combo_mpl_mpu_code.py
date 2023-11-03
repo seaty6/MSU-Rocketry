@@ -6,8 +6,8 @@ import ssl
 import socketpool
 import paho.mqtt.client as mqtt
 
-import adafruit_mpl3115a2
-import adafruit_mpu6050
+from mpl3115a2 import adafruit_mpl3115a2
+from mpu6050 import adafruit_mpu6050
 
 client_name = "SpartanFlight"
 server_address = "raspberrypi"
