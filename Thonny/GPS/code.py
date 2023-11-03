@@ -2,43 +2,18 @@ import time
 import board
 import busio
 
-import os
-import ssl
-import socketpool
-import wifi
-import adafruit_minimqtt.adafruit_minimqtt as MQTT
+import paho.mqtt.client as mqtt
 
 import adafruit_gps
 
 
 ############# MQTT SETUP STUFF #############
-def connect(mqtt_client, userdata, flags, rc):
-    # This function will be called when the mqtt_client is connected successfully to the broker.
-    print("Connected to MQTT Broker!")
 
+client_name = "SpartanFlight"
+server_address = "raspberrypi"
+mqtt_client = mqtt.Client(client_name)
 
-def disconnect(mqtt_client, userdata, rc):
-    # This method is called when the mqtt_client disconnects from the broker.
-    print("Disconnected from MQTT Broker!")
-    
-    
-# Connect to WiFi
-wifi.radio.connect(os.getenv("CIRCUITPY_WIFI_SSID"), os.getenv("CIRCUITPY_WIFI_PASSWORD"))
-
-# Create a socket pool
-pool = socketpool.SocketPool(wifi.radio)
-
-# Set up a MiniMQTT Client
-mqtt_client = MQTT.MQTT(
-    broker="192.168.0.100",
-    port=1883,
-    username="RocketryMQTTAP",
-    password="gospartans",
-    socket_pool=pool,
-    ssl_context=ssl.create_default_context(),
-)
-
-mqtt_client.connect()
+mqtt_client.connect(server_address, 1883, 60)
 
 ############################################
 
