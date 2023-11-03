@@ -1,9 +1,6 @@
 import time
 import board
 
-import os
-import ssl
-import socketpool
 import paho.mqtt.client as mqtt
 
 from mpl3115a2 import adafruit_mpl3115a2
