@@ -1,6 +1,6 @@
 [
     {
-        "id": "3a0e2251f092d520",
+        "id": "52e8d5fce57c0ee0",
         "type": "tab",
         "label": "Test Stand Electronics",
         "disabled": false,
@@ -8,817 +8,28 @@
         "env": []
     },
     {
-        "id": "3967ecf599ba2756",
-        "type": "mqtt out",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/solenoid",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "8f0859823d35e390",
-        "x": 540,
-        "y": 180,
-        "wires": []
+        "id": "e4e02b14d96e090b",
+        "type": "tab",
+        "label": "Pressure Transducer 1 Calibration",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
-        "id": "63736a6b64b21663",
-        "type": "mqtt out",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/solenoid",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "8f0859823d35e390",
-        "x": 600,
-        "y": 460,
-        "wires": []
+        "id": "813b0b32d0aa75cf",
+        "type": "tab",
+        "label": "Pressure Transducer 2 Calibration",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
-        "id": "38145b4ea934f5ec",
-        "type": "ui_chart",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "group": "2933dd722d9486d8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "label": "PrssureComb",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 300,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "749c92b338a2b163",
-        "type": "mqtt in",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/pressure",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "8f0859823d35e390",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 180,
-        "wires": [
-            [
-                "38145b4ea934f5ec"
-            ]
-        ]
-    },
-    {
-        "id": "5304fb2a4c75875f",
-        "type": "mqtt in",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "testtopic/#",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "8f0859823d35e390",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 100,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6d43d760f82c773f",
-        "type": "ui_chart",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "group": "2933dd722d9486d8",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "PressureIntTank",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "Pressure",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 800,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6e017b51e3fad40c",
-        "type": "mqtt in",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/pressure",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "8f0859823d35e390",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 530,
-        "y": 300,
-        "wires": [
-            [
-                "6d43d760f82c773f"
-            ]
-        ]
-    },
-    {
-        "id": "08f53b5aead9237d",
-        "type": "ui_chart",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "group": "2933dd722d9486d8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "label": "PressureFlexLine",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 770,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a15f5c687d85489e",
-        "type": "mqtt in",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/pressure",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "8f0859823d35e390",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 390,
-        "y": 660,
-        "wires": [
-            [
-                "08f53b5aead9237d"
-            ]
-        ]
-    },
-    {
-        "id": "250cf42eba177aba",
-        "type": "mqtt out",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/solenoid",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "8f0859823d35e390",
-        "x": 1000,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "4ea551dc757efc95",
-        "type": "ui_switch",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "label": "IntDrainSol",
-        "tooltip": "",
-        "group": "f0ab6a94c37a62ed",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "1on",
-        "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "1off",
-        "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 250,
-        "y": 340,
-        "wires": [
-            [
-                "3967ecf599ba2756",
-                "fbc211eac8e7fa61"
-            ]
-        ]
-    },
-    {
-        "id": "55719a948432644e",
-        "type": "ui_switch",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "label": "FlexFillSol",
-        "tooltip": "",
-        "group": "f0ab6a94c37a62ed",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "3on",
-        "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "3off",
-        "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 730,
-        "y": 260,
-        "wires": [
-            [
-                "250cf42eba177aba",
-                "9dcc86049e653feb"
-            ]
-        ]
-    },
-    {
-        "id": "3e2bee089f4d604b",
-        "type": "ui_switch",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "label": "FlexDrainSol",
-        "tooltip": "",
-        "group": "f0ab6a94c37a62ed",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "2on",
-        "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "2off",
-        "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 230,
-        "y": 480,
-        "wires": [
-            [
-                "63736a6b64b21663",
-                "fbc211eac8e7fa61"
-            ]
-        ]
-    },
-    {
-        "id": "d523a52adb6c87c5",
-        "type": "change",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "3off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 540,
-        "y": 380,
-        "wires": [
-            [
-                "55719a948432644e"
-            ]
-        ]
-    },
-    {
-        "id": "fbc211eac8e7fa61",
-        "type": "switch",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 350,
-        "y": 420,
-        "wires": [
-            [
-                "d523a52adb6c87c5"
-            ],
-            [
-                "d523a52adb6c87c5"
-            ]
-        ]
-    },
-    {
-        "id": "9dcc86049e653feb",
-        "type": "switch",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "3on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "3on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 910,
-        "y": 500,
-        "wires": [
-            [
-                "fb3a1ff228c1a7ab"
-            ],
-            [
-                "36a23818448d5c8f"
-            ]
-        ]
-    },
-    {
-        "id": "fb3a1ff228c1a7ab",
-        "type": "change",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "1off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 600,
-        "y": 600,
-        "wires": [
-            [
-                "4ea551dc757efc95"
-            ]
-        ]
-    },
-    {
-        "id": "36a23818448d5c8f",
-        "type": "change",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "2off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 660,
-        "y": 760,
-        "wires": [
-            [
-                "3e2bee089f4d604b"
-            ]
-        ]
-    },
-    {
-        "id": "1bc7f8432a15103f",
-        "type": "ui_chart",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "group": "f0ab6a94c37a62ed",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Load Cells",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 610,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e57c673bfd937a17",
-        "type": "mqtt in",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/loadcells/values",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "8f0859823d35e390",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 280,
-        "y": 1020,
-        "wires": [
-            [
-                "1bc7f8432a15103f"
-            ]
-        ]
-    },
-    {
-        "id": "18125a37d6552156",
-        "type": "ui_chart",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "group": "f0ab6a94c37a62ed",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "Thermocouples",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 620,
-        "y": 920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "31304f4f028e8b02",
-        "type": "mqtt in",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "topic/thermocouples",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "8f0859823d35e390",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 270,
-        "y": 940,
-        "wires": [
-            [
-                "18125a37d6552156"
-            ]
-        ]
-    },
-    {
-        "id": "b2ca5f8be192a3af",
-        "type": "mqtt in",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "topic": "/pressure/1",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "8f0859823d35e390",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 200,
-        "y": 1120,
-        "wires": [
-            [
-                "bb0e15132ec06edd",
-                "b81219a8da3f398a"
-            ]
-        ]
-    },
-    {
-        "id": "95b35b7fad0c5b1f",
-        "type": "function",
-        "z": "3a0e2251f092d520",
-        "name": "Store Calibration",
-        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length < 2) {\n    calibrationPoints.push({\n        rawValue: msg.payload.rawValue,\n        pressureValue: msg.payload.pressureValue\n    });\n    \n    flow.set(\"calibrationPoints\", calibrationPoints);\n}\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 1480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bb0e15132ec06edd",
-        "type": "function",
-        "z": "3a0e2251f092d520",
-        "name": "function 1",
-        "func": "flow.set(\"lastRawValue\", msg.payload);\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3fa1374de92dffa5",
-        "type": "function",
-        "z": "3a0e2251f092d520",
-        "name": "function 2",
-        "func": "var pressureValue = parseInt(msg.payload.calibrationValue, 10);  // Convert entered value to number\nvar rawValue = flow.get(\"lastRawValue\");\n\nreturn {\n    payload: {\n        pressureValue: pressureValue,\n        rawValue: rawValue\n    }\n};\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 1340,
-        "wires": [
-            [
-                "95b35b7fad0c5b1f"
-            ]
-        ]
-    },
-    {
-        "id": "b81219a8da3f398a",
-        "type": "function",
-        "z": "3a0e2251f092d520",
-        "name": "Calculate Pressure",
-        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length === 2) {\n    var p1 = calibrationPoints[0];\n    var p2 = calibrationPoints[1];\n\n    var m = (p2.pressureValue - p1.pressureValue) / (p2.rawValue - p1.rawValue);\n    var b = p1.pressureValue - m * p1.rawValue;\n\n    var pressure = m * msg.payload + b;\n    return { payload: pressure };\n} else {\n    // Not enough calibration points\n    return null;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1180,
-        "wires": [
-            [
-                "ae682bab9d2067c0"
-            ]
-        ]
-    },
-    {
-        "id": "ae682bab9d2067c0",
-        "type": "ui_gauge",
-        "z": "3a0e2251f092d520",
-        "name": "",
-        "group": "752fea892e5794dc",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Pressure Graph",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 720,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "2657e050c3df2579",
-        "type": "ui_form",
-        "z": "3a0e2251f092d520",
-        "name": "Calibration Value Form",
-        "label": "Calibration Value Form",
-        "group": "4755d6d89d9c934a",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Calibration Value",
-                "value": "calibrationValue",
-                "type": "number",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "calibrationValue": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 140,
-        "y": 1300,
-        "wires": [
-            [
-                "3fa1374de92dffa5"
-            ]
-        ]
+        "id": "c5384a884e685489",
+        "type": "tab",
+        "label": "Load Cells (3)",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "8f0859823d35e390",
@@ -852,15 +63,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "2933dd722d9486d8",
-        "type": "ui_group",
-        "name": "Group 2",
-        "tab": "feae6ac99750d11d",
-        "order": 1,
-        "disp": true,
-        "width": 6
-    },
-    {
         "id": "f0ab6a94c37a62ed",
         "type": "ui_group",
         "name": "Default",
@@ -868,17 +70,6 @@
         "order": 2,
         "disp": true,
         "width": 5,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "752fea892e5794dc",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "feae6ac99750d11d",
-        "order": 1,
-        "disp": true,
-        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -908,5 +99,1212 @@
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "bac4c30e9fad0eb2",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6695468d22333f4b",
+        "type": "ui_tab",
+        "name": "Debug Graphs",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a26745f53d1834f0",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "6695468d22333f4b",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f884895d5e5b8794",
+        "type": "mqtt out",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "topic": "/solenoid",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8f0859823d35e390",
+        "x": 520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "172aa76d955b8470",
+        "type": "mqtt out",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "topic": "/solenoid",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8f0859823d35e390",
+        "x": 580,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "a56c9c9fb1c46a13",
+        "type": "mqtt out",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "topic": "/solenoid",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8f0859823d35e390",
+        "x": 980,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5d953628e39fa020",
+        "type": "ui_switch",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "label": "IntTankDrainSol",
+        "tooltip": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "sol3on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "sol3off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "f884895d5e5b8794",
+                "350540582170ce77"
+            ]
+        ]
+    },
+    {
+        "id": "980fe7553c6e64dc",
+        "type": "ui_switch",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "label": "FlexFillSol",
+        "tooltip": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "sol1on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "sol1off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 750,
+        "y": 320,
+        "wires": [
+            [
+                "a56c9c9fb1c46a13",
+                "498a4514dabc504a"
+            ]
+        ]
+    },
+    {
+        "id": "bddccccc5f172122",
+        "type": "ui_switch",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "label": "FlexDrainSol",
+        "tooltip": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "sol2on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "sol2off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "172aa76d955b8470",
+                "350540582170ce77"
+            ]
+        ]
+    },
+    {
+        "id": "a94ba8d3dcaa1084",
+        "type": "change",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sol1off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 420,
+        "wires": [
+            [
+                "980fe7553c6e64dc"
+            ]
+        ]
+    },
+    {
+        "id": "350540582170ce77",
+        "type": "switch",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "sol3on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sol2on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 420,
+        "wires": [
+            [
+                "a94ba8d3dcaa1084"
+            ],
+            [
+                "a94ba8d3dcaa1084"
+            ]
+        ]
+    },
+    {
+        "id": "498a4514dabc504a",
+        "type": "switch",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "sol1on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sol1on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 500,
+        "wires": [
+            [
+                "154466f570b017ae"
+            ],
+            [
+                "3a3887b7b6438832"
+            ]
+        ]
+    },
+    {
+        "id": "154466f570b017ae",
+        "type": "change",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sol3off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 600,
+        "wires": [
+            [
+                "5d953628e39fa020"
+            ]
+        ]
+    },
+    {
+        "id": "3a3887b7b6438832",
+        "type": "change",
+        "z": "52e8d5fce57c0ee0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sol2off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 720,
+        "wires": [
+            [
+                "bddccccc5f172122"
+            ]
+        ]
+    },
+    {
+        "id": "b80bf0b928f7a372",
+        "type": "mqtt in",
+        "z": "e4e02b14d96e090b",
+        "name": "",
+        "topic": "/pressure/1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "6dc91c692a9f3d56",
+                "f1470d8ffb666f8b",
+                "55477f38c589893b",
+                "aa99fd5604899b38"
+            ]
+        ]
+    },
+    {
+        "id": "2fb26147c454d137",
+        "type": "function",
+        "z": "e4e02b14d96e090b",
+        "name": "Store Calibration",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length < 2) {\n    calibrationPoints.push({\n        rawValue: msg.payload.rawValue,\n        pressureValue: msg.payload.pressureValue\n    });\n    \n    flow.set(\"calibrationPoints\", calibrationPoints);\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6dc91c692a9f3d56",
+        "type": "function",
+        "z": "e4e02b14d96e090b",
+        "name": "Last Raw Value Storage",
+        "func": "flow.set(\"lastRawValue\", msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "270412fb64ee13c9",
+        "type": "function",
+        "z": "e4e02b14d96e090b",
+        "name": "function 2",
+        "func": "var pressureValue = parseInt(msg.payload.calibrationValue, 10);  // Convert entered value to number\nvar rawValue = flow.get(\"lastRawValue\");\n\nreturn {\n    payload: {\n        pressureValue: pressureValue,\n        rawValue: rawValue\n    }\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "2fb26147c454d137"
+            ]
+        ]
+    },
+    {
+        "id": "f1470d8ffb666f8b",
+        "type": "function",
+        "z": "e4e02b14d96e090b",
+        "name": "Calculate Pressure",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length === 2) {\n    var p1 = calibrationPoints[0];\n    var p2 = calibrationPoints[1];\n\n    var m = (p2.pressureValue - p1.pressureValue) / (p2.rawValue - p1.rawValue);\n    var b = p1.pressureValue - m * p1.rawValue;\n\n    var pressure = m * msg.payload + b;\n    return { payload: pressure };\n} else {\n    // Not enough calibration points\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "3038d02e5c206d3b"
+            ]
+        ]
+    },
+    {
+        "id": "3038d02e5c206d3b",
+        "type": "ui_gauge",
+        "z": "e4e02b14d96e090b",
+        "name": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Fill Line Pressure",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d1bc18aa918a3719",
+        "type": "ui_form",
+        "z": "e4e02b14d96e090b",
+        "name": "Calibration Value Form",
+        "label": "Internal Pressure Calibration",
+        "group": "4755d6d89d9c934a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Calibration Value",
+                "value": "calibrationValue",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "calibrationValue": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "270412fb64ee13c9"
+            ]
+        ]
+    },
+    {
+        "id": "55477f38c589893b",
+        "type": "ui_gauge",
+        "z": "e4e02b14d96e090b",
+        "name": "",
+        "group": "a26745f53d1834f0",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Debug Pressure Int Tank",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "aa99fd5604899b38",
+        "type": "ui_chart",
+        "z": "e4e02b14d96e090b",
+        "name": "",
+        "group": "a26745f53d1834f0",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Debug Pressure Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4095",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 600,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "419c5e2c21c8b278",
+        "type": "mqtt in",
+        "z": "813b0b32d0aa75cf",
+        "name": "",
+        "topic": "/pressure/2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "6a660e3b1f76ba86",
+                "fa96ccb2d4a0f8f5",
+                "4d31ede9339b98e7",
+                "a330d51e006c25e6"
+            ]
+        ]
+    },
+    {
+        "id": "7977965be19f3b1d",
+        "type": "function",
+        "z": "813b0b32d0aa75cf",
+        "name": "Store Calibration",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length < 2) {\n    calibrationPoints.push({\n        rawValue: msg.payload.rawValue,\n        pressureValue: msg.payload.pressureValue\n    });\n    \n    flow.set(\"calibrationPoints\", calibrationPoints);\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a660e3b1f76ba86",
+        "type": "function",
+        "z": "813b0b32d0aa75cf",
+        "name": "function 3",
+        "func": "flow.set(\"lastRawValue\", msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ac2ccd2d7d5b492",
+        "type": "function",
+        "z": "813b0b32d0aa75cf",
+        "name": "function 4",
+        "func": "var pressureValue = parseInt(msg.payload.calibrationValue, 10);  // Convert entered value to number\nvar rawValue = flow.get(\"lastRawValue\");\n\nreturn {\n    payload: {\n        pressureValue: pressureValue,\n        rawValue: rawValue\n    }\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "7977965be19f3b1d"
+            ]
+        ]
+    },
+    {
+        "id": "fa96ccb2d4a0f8f5",
+        "type": "function",
+        "z": "813b0b32d0aa75cf",
+        "name": "Calculate Pressure",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length === 2) {\n    var p1 = calibrationPoints[0];\n    var p2 = calibrationPoints[1];\n\n    var m = (p2.pressureValue - p1.pressureValue) / (p2.rawValue - p1.rawValue);\n    var b = p1.pressureValue - m * p1.rawValue;\n\n    var pressure = m * msg.payload + b;\n    return { payload: pressure };\n} else {\n    // Not enough calibration points\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "cd0eb164c3cf2dae"
+            ]
+        ]
+    },
+    {
+        "id": "cd0eb164c3cf2dae",
+        "type": "ui_gauge",
+        "z": "813b0b32d0aa75cf",
+        "name": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Internal Tank Pressure",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 640,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "407e64cd778803bf",
+        "type": "ui_form",
+        "z": "813b0b32d0aa75cf",
+        "name": "Calibration Value Form",
+        "label": "Fill Line Pressure Calibration ",
+        "group": "4755d6d89d9c934a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Calibration Value",
+                "value": "calibrationValue",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "calibrationValue": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "5ac2ccd2d7d5b492"
+            ]
+        ]
+    },
+    {
+        "id": "4d31ede9339b98e7",
+        "type": "ui_gauge",
+        "z": "813b0b32d0aa75cf",
+        "name": "",
+        "group": "a26745f53d1834f0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Debug Pressure Fill Line",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a330d51e006c25e6",
+        "type": "ui_chart",
+        "z": "813b0b32d0aa75cf",
+        "name": "",
+        "group": "a26745f53d1834f0",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Debug Pressure Fill Line Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4095",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 610,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ec61d1f25635bcb",
+        "type": "function",
+        "z": "c5384a884e685489",
+        "name": "Store Calibration",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length < 2) {\n    calibrationPoints.push({\n        rawValue: msg.payload.rawValue,\n        pressureValue: msg.payload.pressureValue\n    });\n    \n    flow.set(\"calibrationPoints\", calibrationPoints);\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3bf391ced57ea04",
+        "type": "function",
+        "z": "c5384a884e685489",
+        "name": "Last Raw Value Storage",
+        "func": "flow.set(\"lastRawValue\", msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58f401a565086e13",
+        "type": "function",
+        "z": "c5384a884e685489",
+        "name": "Function",
+        "func": "var pressureValue = parseInt(msg.payload.calibrationValue, 10);  // Convert entered value to number\nvar rawValue = flow.get(\"lastRawValue\");\n\nreturn {\n    payload: {\n        pressureValue: pressureValue,\n        rawValue: rawValue\n    }\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "6ec61d1f25635bcb"
+            ]
+        ]
+    },
+    {
+        "id": "63cd4e965c6ecaf1",
+        "type": "function",
+        "z": "c5384a884e685489",
+        "name": "Calculate Pressure",
+        "func": "var calibrationPoints = flow.get(\"calibrationPoints\") || [];\n\nif (calibrationPoints.length === 2) {\n    var p1 = calibrationPoints[0];\n    var p2 = calibrationPoints[1];\n\n    var m = (p2.pressureValue - p1.pressureValue) / (p2.rawValue - p1.rawValue);\n    var b = p1.pressureValue - m * p1.rawValue;\n\n    var pressure = m * msg.payload + b;\n    return { payload: pressure };\n} else {\n    // Not enough calibration points\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "38ce02020c66399f"
+            ]
+        ]
+    },
+    {
+        "id": "38ce02020c66399f",
+        "type": "ui_gauge",
+        "z": "c5384a884e685489",
+        "name": "",
+        "group": "f0ab6a94c37a62ed",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Load Cell Pressure Graph",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 750,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "891fa6825ebc5f8b",
+        "type": "ui_form",
+        "z": "c5384a884e685489",
+        "name": "Calibration Value Form",
+        "label": "Load Cell Calibration Form",
+        "group": "4755d6d89d9c934a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Calibration Value",
+                "value": "calibrationValue",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "calibrationValue": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "58f401a565086e13"
+            ]
+        ]
+    },
+    {
+        "id": "b74b65d1652d7d3a",
+        "type": "mqtt in",
+        "z": "c5384a884e685489",
+        "name": "",
+        "topic": "/loadcell/force1/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 440,
+        "wires": [
+            [
+                "daf23bbdf2c2f151"
+            ]
+        ]
+    },
+    {
+        "id": "cbb250f73b561c63",
+        "type": "mqtt in",
+        "z": "c5384a884e685489",
+        "name": "",
+        "topic": "/loadcell/force2/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 500,
+        "wires": [
+            [
+                "f8276e4e5e08d169"
+            ]
+        ]
+    },
+    {
+        "id": "19a26d8df62b99dc",
+        "type": "mqtt in",
+        "z": "c5384a884e685489",
+        "name": "",
+        "topic": "/loadcell/force3/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 560,
+        "wires": [
+            [
+                "7eecad266c04c1c5"
+            ]
+        ]
+    },
+    {
+        "id": "3172623a401e7cb7",
+        "type": "mqtt in",
+        "z": "c5384a884e685489",
+        "name": "",
+        "topic": "/loadcell/forceavg/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8f0859823d35e390",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "a3bf391ced57ea04",
+                "63cd4e965c6ecaf1"
+            ]
+        ]
+    },
+    {
+        "id": "daf23bbdf2c2f151",
+        "type": "ui_gauge",
+        "z": "c5384a884e685489",
+        "name": "",
+        "group": "a26745f53d1834f0",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Load Cell 1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 450,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f8276e4e5e08d169",
+        "type": "ui_gauge",
+        "z": "c5384a884e685489",
+        "name": "",
+        "group": "a26745f53d1834f0",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Load Cell 2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 450,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7eecad266c04c1c5",
+        "type": "ui_gauge",
+        "z": "c5384a884e685489",
+        "name": "",
+        "group": "a26745f53d1834f0",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Load Cell 3",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 450,
+        "y": 560,
+        "wires": []
     }
 ]
