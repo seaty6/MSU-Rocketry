@@ -25,14 +25,11 @@ while True:
     value1 = hx1.get_value()
     value2 = hx2.get_value()
     value3 = hx3.get_value()
-    valueavg = (value1+value2+value3)/3
     mqttc.publish( b'/loadcell/force1/', str(value1).encode() )
     mqttc.publish( b'/loadcell/force2/', str(value2).encode() )
     mqttc.publish( b'/loadcell/force3/', str(value3).encode() )
-    mqttc.publish( b'/loadcell/forceavg/', str(valueavg).encode() )
     print("HX Get Value1:", value1)
     print("HX Get Value2:", value2)
     print("HX Get Value3:", value3)
-    print("HX Get Valueavg:", valueavg)
     time.sleep(0.25)
 

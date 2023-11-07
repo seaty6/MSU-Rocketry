@@ -1,44 +1,16 @@
 import time
 import board
 
-import os
-import ssl
-import socketpool
-import wifi
-import adafruit_minimqtt.adafruit_minimqtt as MQTT
+import paho.mqtt.client as mqtt
 
-import adafruit_mpl3115a2
-import adafruit_mpu6050
+from mpl3115a2 import adafruit_mpl3115a2
+from mpu6050 import adafruit_mpu6050
 
+client_name = "SpartanFlight"
+server_address = "raspberrypi"
+mqtt_client = mqtt.Client(client_name)
 
-############# MQTT SETUP STUFF #############
-def connect(mqtt_client, userdata, flags, rc):
-    # This function will be called when the mqtt_client is connected successfully to the broker.
-    print("Connected to MQTT Broker!")
-
-
-def disconnect(mqtt_client, userdata, rc):
-    # This method is called when the mqtt_client disconnects from the broker.
-    print("Disconnected from MQTT Broker!")
-    
-    
-# Connect to WiFi
-wifi.radio.connect(os.getenv("CIRCUITPY_WIFI_SSID"), os.getenv("CIRCUITPY_WIFI_PASSWORD"))
-
-# Create a socket pool
-pool = socketpool.SocketPool(wifi.radio)
-
-# Set up a MiniMQTT Client
-mqtt_client = MQTT.MQTT(
-    broker="192.168.0.100",
-    port=1883,
-    username="RocketryMQTTAP",
-    password="gospartans",
-    socket_pool=pool,
-    ssl_context=ssl.create_default_context(),
-)
-
-mqtt_client.connect()
+mqtt_client.connect(server_address, 1883, 60)
 
 ############################################
 
@@ -54,9 +26,9 @@ mpu = adafruit_mpu6050.MPU6050(i2c)
 
 
 while True:
-    mqtt_client.publish(topic="mpl3115a2/altitude", msg=str( sensor.altitude ))
-    mqtt_client.publish(topic="mpl3115a2/temperature", msg=str( sensor.temperature ))
+    mqtt_client.publish("mpl3115a2/altitude", str( sensor.altitude ))
+    mqtt_client.publish("mpl3115a2/temperature", str( sensor.temperature ))
     
-    mqtt_client.publish(topic="mpu6050/AcX", msg=str( mpu.acceleration[0] ))
-    mqtt_client.publish(topic="mpu6050/AcY", msg=str( mpu.acceleration[1] ))
+    mqtt_client.publish("mpu6050/AcX", str( mpu.acceleration[0] ))
+    mqtt_client.publish("mpu6050/AcY", str( mpu.acceleration[1] ))
     time.sleep(0.5)
